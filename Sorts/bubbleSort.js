@@ -1,6 +1,8 @@
-let arr = [123, 234, 53, 64, 64, 335, 765, 343];
-
-// 冒泡排序
+/**
+ * 冒泡排序：通过比较相邻元素并交换它们的位置，逐步将最大元素冒泡到列表末尾。这个过程重复进行，直到整个列表有序。
+ * 时间复杂度：O(n^2)
+ * 空间复杂度：O(1)
+ */
 function bubbleSort(arr) {
   let len = arr.length;
   for (let i = 0; i < len; i++) {
@@ -10,7 +12,9 @@ function bubbleSort(arr) {
       }
     }
   }
+  return arr;
 }
 
-bubbleSort(arr);
-console.log(arr);
+const randomArray = require("./randomArray")();
+let ret = bubbleSort(randomArray);
+console.log(ret);
